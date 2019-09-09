@@ -1,0 +1,50 @@
+﻿<%--I Submit to the JMU Honor Code - Nicole Williamson & Leandra Rios--%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DataMasterPage.master.cs" Inherits="DataMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Nicole Williamson and Leandra Rios Lab 4</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        #topContent {
+            text-align: center;
+        }
+        #footerContent {
+            text-align: center;
+        }
+    </style>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <script src="/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Scripts/popper.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <div id="topContent">
+            <asp:Label ID="Name" runat="server" Text="Nicole Williamson & Leandra Rios Lab 4" />
+            <br /><br />
+            <asp:Button ID="Bootstrap" runat="server" Text="Bootstrap" BorderColor="Purple" Font-Bold="true" PostBackUrl="~/Bootstrap.aspx" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Tableau" runat="server" Text="Tableau" BorderColor="SteelBlue" Font-Bold="true" PostBackUrl="~/Tableau.aspx"/>
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="ProductImages" runat="server" Text="Product Images" BorderColor="SeaGreen" Font-Bold="true" PostBackUrl="~/ProductVisual.aspx"/>
+            <br /><br />
+
+    </div>
+        
+    <div id="mainContent">
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <div id="footerContent">
+        <%--<asp:Button ID="Clear" runat="server" Text="Clear" OnClick="Clear_Click" />
+        &nbsp;&nbsp;&nbsp;--%>
+        <asp:Button ID="Exit" runat="server" Text="Exit" OnClick="Exit_Click"/>
+    </div>
+    </form>
+</body>
+</html>
